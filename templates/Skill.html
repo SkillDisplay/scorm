@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ skill.title }}</title>
+</head>
+<body>
+
+<h1>{{ skill.title }}</h1>
+<h2>Description</h2>
+{{ skill.description| raw }}
+<h2>Goals</h2>
+<p>{{ skill.goals | raw }}</p>
+<h3>Domain</h3>
+<p>{{ skill.domainTag | first }}</p>
+<h3>Links</h3>
+<ul>
+    {% for link in skill.links %}
+    <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

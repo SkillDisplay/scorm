@@ -1,0 +1,25 @@
+{
+    "name": "skilldisplay/scorm",
+    "description": "Creates a SCORM package from SkillSet information",
+    "type": "project",
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SkillDisplay\\Scorm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Florian Weiss",
+            "email": "florian.weiss@weissheiten.at"
+        }
+    ],
+    "require": {
+        "skilldisplay/phptoolkit": "^1.0",
+        "twig/twig": "^3.4"
+    }
+}
