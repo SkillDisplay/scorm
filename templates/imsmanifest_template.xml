@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no" ?>
+<!--
+Minimum calls, run-time example. . SCORM 1.2.
+
+Provided by Rustici Software - http://www.scorm.com
+
+This example builds upon the single file per SCO example to add the bare minimum SCORM 
+run-time calls.
+-->
+
+<manifest identifier="eu.skilldisplay.scorm.12" version="1"
+       xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+       xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                           http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                           http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="skilldisplay">
+    <organization identifier="skilldisplay">
+      <title>{{ skillset.name }}</title>
+      {% for skill in skills %}
+      <item identifier="{{skill.shorttitle}}_item" identifierref="{{skill.shorttitle}}_resource">
+        <title>{{skill.title}}</title>
+      </item>
+      {% endfor %}
+    </organization>
+  </organizations>
+
+  <resources>
+    <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
+    {% for skill in skills %}
+    <resource identifier="{{skill.shorttitle}}_resource" type="webcontent" adlcp:scormtype="sco" href="skills/{{skill.shorttitle}}.html">
+      <file href="skills/{{skill.shorttitle}}.html"/>
+      <dependency identifierref="common_files" />
+    </resource>
+    {% endfor %}
+    <!--The shared files remain as an asset-->
+    <resource identifier="common_files" type="webcontent" adlcp:scormtype="asset">
+      <file href="shared/scormfunctions.js"/>
+      <file href="shared/style.css"/>
+    </resource>
+
+  </resources>
+</manifest>

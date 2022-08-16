@@ -18,5 +18,33 @@
     <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
     {% endfor %}
 </ul>
+<h3>Resources</h3>
+<h4>Free Learning Material</h4>
+<ul>
+{% for skillset in relatedLearner %}
+    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+{% endfor %}
+</ul>
+<h4>Educational Training</h4>
+<ul>
+    {% for skillset in relatedEducation %}
+    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h4>Business Opportunities</h4>
+<ul>
+    {% for skillset in relatedBusiness %}
+    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h4>Certification</h4>
+<ul>
+    {% for skillset in relatedCertifier %}
+    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+    {% endfor %}
+</ul>
+
 </body>
 </html>

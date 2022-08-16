@@ -20,6 +20,9 @@
     ],
     "require": {
         "skilldisplay/phptoolkit": "^1.0",
-        "twig/twig": "^3.4"
+        "twig/twig": "^3.4",
+        "ext-json": "*",
+        "alchemy/zippy": "^1.0",
+        "ext-readline": "*"
     }
 }
