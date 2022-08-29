@@ -22,87 +22,24 @@ run-time calls.
   </metadata>
   <organizations default="skilldisplay">
     <organization identifier="skilldisplay">
-      <title>WEBT | CORE | Object Oriented PHP with Version Control</title>
-            <item identifier="abstract_classes_item" identifierref="abstract_classes_resource">
-        <title>Abstract classes</title>
+      <title>WEBT | ADV | Basic Unit Tests in PHP</title>
+            <item identifier="phpunit_basics_item" identifierref="phpunit_basics_resource">
+        <title>PHPUnit basics</title>
       </item>
-            <item identifier="css_basics_(htlw3r)_item" identifierref="css_basics_(htlw3r)_resource">
-        <title>CSS basics (HTLW3R)</title>
-      </item>
-            <item identifier="git_basics_item" identifierref="git_basics_resource">
-        <title>Git basics</title>
-      </item>
-            <item identifier="html_basics_item" identifierref="html_basics_resource">
-        <title>HTML basics</title>
-      </item>
-            <item identifier="inheritance_item" identifierref="inheritance_resource">
-        <title>Inheritance</title>
-      </item>
-            <item identifier="interfaces_item" identifierref="interfaces_resource">
-        <title>Interfaces</title>
-      </item>
-            <item identifier="namespaces_item" identifierref="namespaces_resource">
-        <title>Namespaces</title>
-      </item>
-            <item identifier="object-oriented_programming_in_php_8_item" identifierref="object-oriented_programming_in_php_8_resource">
-        <title>Object-oriented programming in PHP 8</title>
-      </item>
-            <item identifier="php_basics_and_variables_item" identifierref="php_basics_and_variables_resource">
-        <title>PHP basics and variables</title>
-      </item>
-            <item identifier="using_php_for_html_responses_item" identifierref="using_php_for_html_responses_resource">
-        <title>Using PHP for HTML responses</title>
-      </item>
-            <item identifier="using_php_on_the_command_line_item" identifierref="using_php_on_the_command_line_resource">
-        <title>Using PHP on the command line</title>
+            <item identifier="unit_testing_item" identifierref="unit_testing_resource">
+        <title>Unit testing</title>
       </item>
           </organization>
   </organizations>
 
   <resources>
     <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
-        <resource identifier="abstract_classes_resource" type="webcontent" adlcp:scormtype="sco" href="skills/abstract_classes.html">
-      <file href="skills/abstract_classes.html"/>
+        <resource identifier="phpunit_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/phpunit_basics.html">
+      <file href="skills/phpunit_basics.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="css_basics_(htlw3r)_resource" type="webcontent" adlcp:scormtype="sco" href="skills/css_basics_(htlw3r).html">
-      <file href="skills/css_basics_(htlw3r).html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="git_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/git_basics.html">
-      <file href="skills/git_basics.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="html_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/html_basics.html">
-      <file href="skills/html_basics.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="inheritance_resource" type="webcontent" adlcp:scormtype="sco" href="skills/inheritance.html">
-      <file href="skills/inheritance.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="interfaces_resource" type="webcontent" adlcp:scormtype="sco" href="skills/interfaces.html">
-      <file href="skills/interfaces.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="namespaces_resource" type="webcontent" adlcp:scormtype="sco" href="skills/namespaces.html">
-      <file href="skills/namespaces.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="object-oriented_programming_in_php_8_resource" type="webcontent" adlcp:scormtype="sco" href="skills/object-oriented_programming_in_php_8.html">
-      <file href="skills/object-oriented_programming_in_php_8.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="php_basics_and_variables_resource" type="webcontent" adlcp:scormtype="sco" href="skills/php_basics_and_variables.html">
-      <file href="skills/php_basics_and_variables.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="using_php_for_html_responses_resource" type="webcontent" adlcp:scormtype="sco" href="skills/using_php_for_html_responses.html">
-      <file href="skills/using_php_for_html_responses.html"/>
-      <dependency identifierref="common_files" />
-    </resource>
-        <resource identifier="using_php_on_the_command_line_resource" type="webcontent" adlcp:scormtype="sco" href="skills/using_php_on_the_command_line.html">
-      <file href="skills/using_php_on_the_command_line.html"/>
+        <resource identifier="unit_testing_resource" type="webcontent" adlcp:scormtype="sco" href="skills/unit_testing.html">
+      <file href="skills/unit_testing.html"/>
       <dependency identifierref="common_files" />
     </resource>
         <!--The shared files remain as an asset-->

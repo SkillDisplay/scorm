@@ -13,8 +13,9 @@ use Alchemy\Zippy\Zippy;
 // Prompt user to enter a SkillSet ID
 $skillsetID = intval(readline('Please enter the SkillSet ID: '));
 
+require('config/config.inc.php');
 // We don't need an APIKey or Verifier Credentials, just create some empty settings
-$mySettings = new Settings('none');
+$mySettings = new Settings($apiKey);
 
 // we want to create Verification Buttons styled in the standard SkillDisplay Design for "Choosing a secure password"
 // A click on a link created this way will trigger the Verification interface on the SkillDisplay platform.
