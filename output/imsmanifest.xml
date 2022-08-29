@@ -22,93 +22,105 @@ run-time calls.
   </metadata>
   <organizations default="skilldisplay">
     <organization identifier="skilldisplay">
-      <title>CMS-VT | CORE | TYPO3 - Creating and maintaining website content</title>
-            <item identifier="about_typo3_item" identifierref="about_typo3_resource">
-        <title>About TYPO3</title>
+      <title>WEBT | CORE | Object Oriented PHP with Version Control</title>
+            <item identifier="abstract_classes_item" identifierref="abstract_classes_resource">
+        <title>Abstract classes</title>
       </item>
-            <item identifier="backend_account_item" identifierref="backend_account_resource">
-        <title>Backend account</title>
+            <item identifier="css_basics_(htlw3r)_item" identifierref="css_basics_(htlw3r)_resource">
+        <title>CSS basics (HTLW3R)</title>
       </item>
-            <item identifier="backend_navigation_components_item" identifierref="backend_navigation_components_resource">
-        <title>Backend navigation components</title>
+            <item identifier="git_basics_item" identifierref="git_basics_resource">
+        <title>Git basics</title>
       </item>
-            <item identifier="content_elements_item" identifierref="content_elements_resource">
-        <title>Content elements</title>
+            <item identifier="html_basics_item" identifierref="html_basics_resource">
+        <title>HTML basics</title>
       </item>
-            <item identifier="frontend_and_backend_item" identifierref="frontend_and_backend_resource">
-        <title>Frontend and backend</title>
+            <item identifier="inheritance_item" identifierref="inheritance_resource">
+        <title>Inheritance</title>
       </item>
-            <item identifier="page_item" identifierref="page_resource">
-        <title>Page</title>
+            <item identifier="interfaces_item" identifierref="interfaces_resource">
+        <title>Interfaces</title>
       </item>
-            <item identifier="page_tree_item" identifierref="page_tree_resource">
-        <title>Page Tree</title>
+            <item identifier="namespaces_item" identifierref="namespaces_resource">
+        <title>Namespaces</title>
       </item>
-            <item identifier="page_properties_item" identifierref="page_properties_resource">
-        <title>Page properties</title>
+            <item identifier="object-oriented_programming_in_php_8_item" identifierref="object-oriented_programming_in_php_8_resource">
+        <title>Object-oriented programming in PHP 8</title>
       </item>
-            <item identifier="roles_in_typo3_item" identifierref="roles_in_typo3_resource">
-        <title>Roles in TYPO3</title>
+            <item identifier="php_basics_and_variables_item" identifierref="php_basics_and_variables_resource">
+        <title>PHP basics and variables</title>
       </item>
-            <item identifier="seo_(technical)_item" identifierref="seo_(technical)_resource">
-        <title>SEO (Technical)</title>
+            <item identifier="using_php_for_html_responses_item" identifierref="using_php_for_html_responses_resource">
+        <title>Using PHP for HTML responses</title>
       </item>
-            <item identifier="working_with_files_item" identifierref="working_with_files_resource">
-        <title>Working with files</title>
+            <item identifier="using_php_on_the_command_line_item" identifierref="using_php_on_the_command_line_resource">
+        <title>Using PHP on the command line</title>
       </item>
           </organization>
   </organizations>
 
   <resources>
     <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
-        <resource identifier="about_typo3_resource" type="webcontent" adlcp:scormtype="sco" href="skills/about_typo3.html">
-      <file href="skills/about_typo3.html"/>
+        <resource identifier="abstract_classes_resource" type="webcontent" adlcp:scormtype="sco" href="skills/abstract_classes.html">
+      <file href="skills/abstract_classes.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="backend_account_resource" type="webcontent" adlcp:scormtype="sco" href="skills/backend_account.html">
-      <file href="skills/backend_account.html"/>
+        <resource identifier="css_basics_(htlw3r)_resource" type="webcontent" adlcp:scormtype="sco" href="skills/css_basics_(htlw3r).html">
+      <file href="skills/css_basics_(htlw3r).html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="backend_navigation_components_resource" type="webcontent" adlcp:scormtype="sco" href="skills/backend_navigation_components.html">
-      <file href="skills/backend_navigation_components.html"/>
+        <resource identifier="git_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/git_basics.html">
+      <file href="skills/git_basics.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="content_elements_resource" type="webcontent" adlcp:scormtype="sco" href="skills/content_elements.html">
-      <file href="skills/content_elements.html"/>
+        <resource identifier="html_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/html_basics.html">
+      <file href="skills/html_basics.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="frontend_and_backend_resource" type="webcontent" adlcp:scormtype="sco" href="skills/frontend_and_backend.html">
-      <file href="skills/frontend_and_backend.html"/>
+        <resource identifier="inheritance_resource" type="webcontent" adlcp:scormtype="sco" href="skills/inheritance.html">
+      <file href="skills/inheritance.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="page_resource" type="webcontent" adlcp:scormtype="sco" href="skills/page.html">
-      <file href="skills/page.html"/>
+        <resource identifier="interfaces_resource" type="webcontent" adlcp:scormtype="sco" href="skills/interfaces.html">
+      <file href="skills/interfaces.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="page_tree_resource" type="webcontent" adlcp:scormtype="sco" href="skills/page_tree.html">
-      <file href="skills/page_tree.html"/>
+        <resource identifier="namespaces_resource" type="webcontent" adlcp:scormtype="sco" href="skills/namespaces.html">
+      <file href="skills/namespaces.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="page_properties_resource" type="webcontent" adlcp:scormtype="sco" href="skills/page_properties.html">
-      <file href="skills/page_properties.html"/>
+        <resource identifier="object-oriented_programming_in_php_8_resource" type="webcontent" adlcp:scormtype="sco" href="skills/object-oriented_programming_in_php_8.html">
+      <file href="skills/object-oriented_programming_in_php_8.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="roles_in_typo3_resource" type="webcontent" adlcp:scormtype="sco" href="skills/roles_in_typo3.html">
-      <file href="skills/roles_in_typo3.html"/>
+        <resource identifier="php_basics_and_variables_resource" type="webcontent" adlcp:scormtype="sco" href="skills/php_basics_and_variables.html">
+      <file href="skills/php_basics_and_variables.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="seo_(technical)_resource" type="webcontent" adlcp:scormtype="sco" href="skills/seo_(technical).html">
-      <file href="skills/seo_(technical).html"/>
+        <resource identifier="using_php_for_html_responses_resource" type="webcontent" adlcp:scormtype="sco" href="skills/using_php_for_html_responses.html">
+      <file href="skills/using_php_for_html_responses.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="working_with_files_resource" type="webcontent" adlcp:scormtype="sco" href="skills/working_with_files.html">
-      <file href="skills/working_with_files.html"/>
+        <resource identifier="using_php_on_the_command_line_resource" type="webcontent" adlcp:scormtype="sco" href="skills/using_php_on_the_command_line.html">
+      <file href="skills/using_php_on_the_command_line.html"/>
       <dependency identifierref="common_files" />
     </resource>
         <!--The shared files remain as an asset-->
     <resource identifier="common_files" type="webcontent" adlcp:scormtype="asset">
       <file href="shared/scormfunctions.js"/>
       <file href="shared/style.css"/>
+      <file href="shared/sdskill.css"/>
+      <file href="shared/lato.css"/>
+      <file href="shared/font/lato-v23-latin-300.eot"/>
+      <file href="shared/font/lato-v23-latin-300.svg"/>
+      <file href="shared/font/lato-v23-latin-300.ttf"/>
+      <file href="shared/font/lato-v23-latin-300.woff"/>
+      <file href="shared/font/lato-v23-latin-300.woff2"/>
+      <file href="shared/font/lato-v23-latin-regular.eot"/>
+      <file href="shared/font/lato-v23-latin-regular.svg"/>
+      <file href="shared/font/lato-v23-latin-regular.ttf"/>
+      <file href="shared/font/lato-v23-latin-regular.woff"/>
+      <file href="shared/font/lato-v23-latin-regular.woff2"/>
     </resource>
 
   </resources>

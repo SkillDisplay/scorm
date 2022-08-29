@@ -43,6 +43,18 @@ run-time calls.
     <resource identifier="common_files" type="webcontent" adlcp:scormtype="asset">
       <file href="shared/scormfunctions.js"/>
       <file href="shared/style.css"/>
+      <file href="shared/sdskill.css"/>
+      <file href="shared/lato.css"/>
+      <file href="shared/font/lato-v23-latin-300.eot"/>
+      <file href="shared/font/lato-v23-latin-300.svg"/>
+      <file href="shared/font/lato-v23-latin-300.ttf"/>
+      <file href="shared/font/lato-v23-latin-300.woff"/>
+      <file href="shared/font/lato-v23-latin-300.woff2"/>
+      <file href="shared/font/lato-v23-latin-regular.eot"/>
+      <file href="shared/font/lato-v23-latin-regular.svg"/>
+      <file href="shared/font/lato-v23-latin-regular.ttf"/>
+      <file href="shared/font/lato-v23-latin-regular.woff"/>
+      <file href="shared/font/lato-v23-latin-regular.woff2"/>
     </resource>
 
   </resources>

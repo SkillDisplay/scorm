@@ -2,49 +2,84 @@
 <html>
 <head>
     <title>{{ skill.title }}</title>
+
+    <link rel="stylesheet" href="../shared/sdskill.css" />
+
+    <script src="../shared/scormfunctions.js" type="text/javascript"></script>
 </head>
 <body>
+<div class="container slope white first-element">
+    <div class="content">
+        <div class="sdskill">
+            <article class="text">
+                <h1>{{ skill.title }}</h1>
+                <p class="skillset subheading">{{ skill.brands.0.name }}</p>
 
-<h1>{{ skill.title }}</h1>
-<h2>Description</h2>
-{{ skill.description| raw }}
-<h2>Goals</h2>
-<p>{{ skill.goals | raw }}</p>
-<h3>Domain</h3>
-<p>{{ skill.domainTag | first }}</p>
-<h3>Links</h3>
-<ul>
-    {% for link in skill.links %}
-    <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
-    {% endfor %}
-</ul>
-<h3>Resources</h3>
-<h4>Free Learning Material</h4>
-<ul>
-{% for skillset in relatedLearner %}
-    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
-{% endfor %}
-</ul>
-<h4>Educational Training</h4>
-<ul>
-    {% for skillset in relatedEducation %}
-    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
-    {% endfor %}
-</ul>
+                <a target="_blank" href="https://my.skilldisplay.eu/en/skill/{{ skill.uid }}/0" class="button primary big show-app">Show in
+                    app</a>
 
-<h4>Business Opportunities</h4>
-<ul>
-    {% for skillset in relatedBusiness %}
-    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
-    {% endfor %}
-</ul>
+                <h2>Description</h2>
+                <p>{{ skill.description| raw }}</p>
 
-<h4>Certification</h4>
-<ul>
-    {% for skillset in relatedCertifier %}
-    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
-    {% endfor %}
-</ul>
+                <h2>Goals</h2>
+                <p>{{ skill.goals | raw }}</p>
 
+                <h2>Links</h2>
+                <ul>
+                    {% for link in skill.links %}
+                    <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                <h2>Resources</h2>
+                <h3>Free Learning Material</h3>
+                <ul>
+                    {% for skillset in relatedLearner %}
+                    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                <h3>Educational Training</h3>
+                <ul>
+                    {% for skillset in relatedEducation %}
+                    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <h3>Business Opportunities</h3>
+                <ul>
+                    {% for skillset in relatedBusiness %}
+                    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <h3>Certification</h3>
+                <ul>
+                    {% for skillset in relatedCertifier %}
+                    <li><a href="{{ skillset.url }}" target="_blank">{{ skillset.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Maintainer</h2>
+
+                <div class="skillset-maintainer">
+
+                    <img class="round"
+                         src="https://www.skilldisplay.eu/{{ skill.owner.userAvatar }}"
+                         alt="" width="150" height="150">
+
+                    <div>
+
+                        <span class="name">{{ skill.owner.firstName}} {{ skill.owner.lastName}}</span>
+
+                        <span class="brand">{{ skill.brands.0.name }}</span>
+                    </div>
+                </div>
+
+                <img class="brand-logo" alt="TYPO3" src="https://www.skilldisplay.eu/{{ skill.brands.0.logoPublicUrl }}" width="200" height="100">
+
+
+            </article>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,126 @@
+/*
+    Scorm Package SkillDisplay Skill
+    Class Prefix: sdskill
+    Skill Wrapper Class: sdskill
+*/
+
+/* WRAPPER */
+.sdskill {
+    max-width: 520px !important;
+    margin: 2em auto;
+}
+
+/* END WRAPPER */
+
+/* TYPOGRAPHY */
+/* Lato Font Face Definition*/
+@import url("lato.css");
+
+.sdskill,
+.sdskill p {
+    font-family: 'Lato', sans-serif;
+}
+
+.sdskill h1,
+.sdskill h2,
+.sdskill p.subheading {
+    font-family: 'Lato', sans-serif;
+    line-height: 110%;
+}
+
+.sdskill h1 {
+    font-size: 350%;
+    font-weight: 300;
+    margin: 0.67em 0;
+}
+
+.sdskill h2 {
+    font-size: 250%;
+    font-weight: 400;
+}
+
+.sdskill p.subheading {
+    font-size: 220%;
+    font-weight: 300;
+    color: #828282;
+    margin: -0.75em 0 1em;
+    margin-bottom: 1em;
+}
+
+.sdskill .skillset.subheading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #828282;
+    margin-bottom: 1em;
+}
+
+/* END TYPOGRAPHY */
+
+/* BUTTONS */
+.sdskill button,
+.sdskill a.button {
+    text-decoration: none;
+    line-height: normal;
+    display: inline-block;
+    padding: 0.75em 1em;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s !important;
+}
+
+.sdskill button.primary,
+.sdskill a.button.primary {
+    color: #fff !important;
+    background-color: #2FB4BC;
+}
+
+.sdskill a.button.show-app {
+    width: 100%;
+    text-align: center;
+    font-size: 125%;
+    padding: 0.75em 1em;
+}
+
+/* END BUTTONS */
+
+/* MAINTAINER */
+.skillset-maintainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skillset-maintainer img {
+    margin-right: 1em;
+    border-radius: 100%;
+    max-width: 100%;
+    border-style: none;
+}
+
+.skillset-maintainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skillset-maintainer div span.name {
+    font-size: 175%;
+    line-height: normal;
+}
+
+.skillset-maintainer div span.brand {
+    font-size: 125%;
+    color: #828282;
+}
+
+.sdskill .brand-logo {
+    width: 100%;
+    margin-top: 2.5em;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/* END MAINTAINER */
