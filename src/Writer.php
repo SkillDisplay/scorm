@@ -18,6 +18,17 @@ class Writer
         $this->twig = new \Twig\Environment($loader);
     }
 
+    public function writeSkillSetOverview(SkillSet $skillSet){
+        $template = $this->twig->load('SkillSet.html');
+        $shorttitle = $this->getShortTitleFromTitle('set_'.$skillSet->getName());
+        file_put_contents(
+            $this->OutputDirectory.DIRECTORY_SEPARATOR.'skills'.DIRECTORY_SEPARATOR.$shorttitle.'.html',
+            $template->render([
+                'skillset' => $skillSet->toArray()
+            ])
+        );
+    }
+
     public function writeSkillToHTML(\SkillDisplay\PHPToolKit\Entity\Skill $skill, array $relatedSkillSets){
 
         $template = $this->twig->load('Skill.html');
@@ -38,6 +49,9 @@ class Writer
     public function writeImsManifest(SkillSet $skillset, array $skills){
         $template = $this->twig->load('imsmanifest_template.xml');
 
+        $skillset = $skillset->toArray();
+        $skillset['shorttitle'] = $this->getShortTitleFromTitle('set_'.$skillset['name']);
+
         $skillsarray = array();
         foreach($skills as $skill){
             /* @var \SkillDisplay\PHPToolKit\Entity\Skill $skill */
@@ -56,7 +70,7 @@ class Writer
     }
 
     public function getShortTitleFromTitle(string $title) : string {
-        return strtolower(trim(str_replace(' ', '_', str_replace('|','',$title))));
+        return strtolower(trim(preg_replace("/[^a-z0-9\_\-\.]/i", '',str_replace(' ', '_', str_replace('|','',$title)))));
     }
 
 }

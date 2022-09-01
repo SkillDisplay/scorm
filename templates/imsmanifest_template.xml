@@ -23,6 +23,9 @@ run-time calls.
   <organizations default="skilldisplay">
     <organization identifier="skilldisplay">
       <title>{{ skillset.name }}</title>
+      <item identifier="{{skillset.shorttitle}}_item" identifierref="{{skillset.shorttitle}}_resource">
+        <title>{{skillset.name}}</title>
+      </item>
       {% for skill in skills %}
       <item identifier="{{skill.shorttitle}}_item" identifierref="{{skill.shorttitle}}_resource">
         <title>{{skill.title}}</title>
@@ -32,6 +35,10 @@ run-time calls.
   </organizations>
 
   <resources>
+    <resource identifier="{{skillset.shorttitle}}_resource" type="webcontent" adlcp:scormtype="sco" href="skills/{{skillset.shorttitle}}.html">
+      <file href="skills/{{skillset.shorttitle}}.html"/>
+      <dependency identifierref="common_files" />
+    </resource>
     <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
     {% for skill in skills %}
     <resource identifier="{{skill.shorttitle}}_resource" type="webcontent" adlcp:scormtype="sco" href="skills/{{skill.shorttitle}}.html">

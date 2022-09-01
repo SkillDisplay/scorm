@@ -11,11 +11,13 @@ use SkillDisplay\PHPToolKit\Configuration\Settings;
 use Alchemy\Zippy\Zippy;
 
 // Prompt user to enter a SkillSet ID
-$skillsetID = intval(readline('Please enter the SkillSet ID: '));
+$skillsetIDs = explode(',',(readline('Please enter a single SkillSet ID or multiple IDs seperated by , : ')));
 
 require('config/config.inc.php');
 // We don't need an APIKey or Verifier Credentials, just create some empty settings
 $mySettings = new Settings($apiKey);
+
+foreach($skillsetIDs as $skillsetID){
 
 // we want to create Verification Buttons styled in the standard SkillDisplay Design for "Choosing a secure password"
 // A click on a link created this way will trigger the Verification interface on the SkillDisplay platform.
@@ -26,12 +28,16 @@ $mySkillAPI = new Skill($mySettings, $myGuzzle);
 $mySearchAPI = new Search($mySettings, $myGuzzle);
 
 /* @var \SkillDisplay\PHPToolKit\Entity\SkillSet $mySkillSet */
-$mySkillSet = $mySkillSetAPI->getById($skillsetID);
+$mySkillSet = $mySkillSetAPI->getById(intval($skillsetID));
 $mySkills = $mySkillSet->getSkills();
 sort($mySkills);
 
 $writer = new Writer('templates', 'output');
 
+// Write SkillSet HTML file
+$writer->writeSkillSetOverview($mySkillSet);
+
+// Write Skill HTML files
 /* @var \SkillDisplay\PHPToolKit\Entity\Skill $skill */
 foreach($mySkills as $skill){
     echo "Loading details for Skill ".$skill->getTitle().' ...'.PHP_EOL;
@@ -42,6 +48,7 @@ foreach($mySkills as $skill){
     $writer->writeSkillToHTML($fullSkill, $relatedSkillSets);
 }
 
+// Write Manifest
 $writer->writeImsManifest($mySkillSet, $mySkills);
 
 // Load Zippy
@@ -56,7 +63,7 @@ $archive = $zippy->create(__DIR__.DIRECTORY_SEPARATOR.'output'.DIRECTORY_SEPARAT
     'imsmanifest.xml' => './output/imsmanifest.xml',
     'imsmd_rootv1p2p1.xsd' => './output/imsmd_rootv1p2p1.xsd'
 ));
-
+}
 function groupByCategory(array $skillsets, Settings $settings){
     $sorted = array();
 

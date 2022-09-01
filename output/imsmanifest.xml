@@ -22,24 +22,31 @@ run-time calls.
   </metadata>
   <organizations default="skilldisplay">
     <organization identifier="skilldisplay">
-      <title>WEBT | ADV | Basic Unit Tests in PHP</title>
-            <item identifier="phpunit_basics_item" identifierref="phpunit_basics_resource">
-        <title>PHPUnit basics</title>
+      <title>CMS | ADV | Setting up roles in WordPress</title>
+      <item identifier="set_cms__adv__setting_up_roles_in_wordpress_item" identifierref="set_cms__adv__setting_up_roles_in_wordpress_resource">
+        <title>CMS | ADV | Setting up roles in WordPress</title>
       </item>
-            <item identifier="unit_testing_item" identifierref="unit_testing_resource">
-        <title>Unit testing</title>
+            <item identifier="roles_and_capabilities_in_wordpress_item" identifierref="roles_and_capabilities_in_wordpress_resource">
+        <title>Roles and Capabilities in WordPress</title>
+      </item>
+            <item identifier="user_management_item" identifierref="user_management_resource">
+        <title>User Management</title>
       </item>
           </organization>
   </organizations>
 
   <resources>
-    <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
-        <resource identifier="phpunit_basics_resource" type="webcontent" adlcp:scormtype="sco" href="skills/phpunit_basics.html">
-      <file href="skills/phpunit_basics.html"/>
+    <resource identifier="set_cms__adv__setting_up_roles_in_wordpress_resource" type="webcontent" adlcp:scormtype="sco" href="skills/set_cms__adv__setting_up_roles_in_wordpress.html">
+      <file href="skills/set_cms__adv__setting_up_roles_in_wordpress.html"/>
       <dependency identifierref="common_files" />
     </resource>
-        <resource identifier="unit_testing_resource" type="webcontent" adlcp:scormtype="sco" href="skills/unit_testing.html">
-      <file href="skills/unit_testing.html"/>
+    <!-- Note that with the addition of run-time calls, we changed the scormtype to SCO.-->
+        <resource identifier="roles_and_capabilities_in_wordpress_resource" type="webcontent" adlcp:scormtype="sco" href="skills/roles_and_capabilities_in_wordpress.html">
+      <file href="skills/roles_and_capabilities_in_wordpress.html"/>
+      <dependency identifierref="common_files" />
+    </resource>
+        <resource identifier="user_management_resource" type="webcontent" adlcp:scormtype="sco" href="skills/user_management.html">
+      <file href="skills/user_management.html"/>
       <dependency identifierref="common_files" />
     </resource>
         <!--The shared files remain as an asset-->
